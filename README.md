@@ -35,6 +35,7 @@ These hold across every domain and SOP in this repo:
 
 | Document | Domain | Status |
 |---|---|---|
+| [`AGENTS.md`](./AGENTS.md) | Repo meta / governance | Canonical - active |
 | [`CAROUSEL_PRODUCTION_SOP.md`](./CAROUSEL_PRODUCTION_SOP.md) | Content systems / Social media | V0 (Manual) — active |
 | [`INITIAL_REPO_STATUS.md`](./INITIAL_REPO_STATUS.md) | Repo meta | Reference |
 
@@ -51,6 +52,15 @@ The repo is intentionally lightweight today and will expand as operations are co
 - Reviews (weekly/monthly) and shared evidence libraries live in their own folders as they come online.
 
 See each SOP's "Folder / database structure" section for the layout it expects.
+
+---
+
+## Operating model
+
+How this repo is changed - agent lanes (Claude / Codex / Human), the
+draft -> review -> PR -> merge sequence, approval gates, and branch rules -
+is defined in the canonical operating contract: [`AGENTS.md`](./AGENTS.md).
+Read it before making changes.
 
 ---
 

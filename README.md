@@ -36,6 +36,7 @@ These hold across every domain and SOP in this repo:
 | Document | Domain | Status |
 |---|---|---|
 | [`CAROUSEL_PRODUCTION_SOP.md`](./CAROUSEL_PRODUCTION_SOP.md) | Content systems / Social media | V0 (Manual) — active |
+| [`docs/security/remote-secret-operations.md`](./docs/security/remote-secret-operations.md) | Security / Agent operations | Required control |
 | [`INITIAL_REPO_STATUS.md`](./INITIAL_REPO_STATUS.md) | Repo meta | Reference |
 
 This table grows as new SOPs and systems are added.
@@ -47,6 +48,7 @@ This table grows as new SOPs and systems are added.
 The repo is intentionally lightweight today and will expand as operations are codified. Conventions:
 
 - Top-level `*_SOP.md` files are canonical standard operating procedures.
+- Security doctrine lives under `docs/security/`.
 - Each major content/campaign system owns a folder for its working artifacts (briefs, research, scripts, handoffs, analytics).
 - Reviews (weekly/monthly) and shared evidence libraries live in their own folders as they come online.
 

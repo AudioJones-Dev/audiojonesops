@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://audiojones.com/schemas/visual-scene.schema.json",
+  "title": "Audio Jones Visual Scene",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request", "identity", "subject", "outfit", "environment", "direction", "lighting", "grade", "constraints", "outputs"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "request": {
+      "type": "object",
+      "required": ["campaign", "channel", "asset_type", "aspect_ratio", "marketing_objective"],
+      "properties": {
+        "campaign": {"type": "string"},
+        "channel": {"type": "string"},
+        "asset_type": {"type": "string"},
+        "aspect_ratio": {"type": "string"},
+        "marketing_objective": {"type": "string"}
+      }
+    },
+    "identity": {
+      "type": "object",
+      "required": ["archetype", "required_traits"],
+      "properties": {
+        "archetype": {"type": "string"},
+        "required_traits": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+    "subject": {
+      "type": "object",
+      "required": ["identity_reference_id", "facial_fidelity", "body_fidelity"],
+      "properties": {
+        "identity_reference_id": {"type": "string"},
+        "facial_fidelity": {"enum": ["strict", "high", "standard"]},
+        "body_fidelity": {"enum": ["strict", "high", "standard"]},
+        "grooming_profile": {"type": "string"}
+      }
+    },
+    "outfit": {
+      "type": "object",
+      "required": ["matrix_story", "reliability_band", "top", "bottom", "footwear", "bridge_logic"],
+      "properties": {
+        "matrix_story": {"type": "string"},
+        "reliability_band": {"enum": ["high", "strong", "medium", "advanced", "low"]},
+        "top": {"$ref": "#/$defs/garment"},
+        "bottom": {"$ref": "#/$defs/garment"},
+        "footwear": {"$ref": "#/$defs/garment"},
+        "outerwear": {"anyOf": [{"$ref": "#/$defs/garment"}, {"type": "null"}]},
+        "accessories": {"type": "array", "items": {"type": "string"}},
+        "bridge_logic": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+    "environment": {"type": "object"},
+    "direction": {"type": "object"},
+    "lighting": {"type": "object"},
+    "grade": {"type": "object"},
+    "constraints": {
+      "type": "object",
+      "required": ["prohibit"],
+      "properties": {"prohibit": {"type": "array", "items": {"type": "string"}, "minItems": 1}}
+    },
+    "outputs": {
+      "type": "object",
+      "required": ["intended_uses", "metadata_required", "approval_required"],
+      "properties": {
+        "intended_uses": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "metadata_required": {"type": "boolean"},
+        "approval_required": {"type": "boolean"}
+      }
+    }
+  },
+  "$defs": {
+    "garment": {
+      "type": "object",
+      "required": ["garment_type", "category", "color_token"],
+      "properties": {
+        "garment_type": {"type": "string"},
+        "category": {"type": "string"},
+        "color_token": {"type": "string"},
+        "material": {"type": "string"},
+        "fit": {"type": "string"}
+      }
+    }
+  }
+}

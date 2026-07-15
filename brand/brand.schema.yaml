@@ -1,0 +1,143 @@
+brand:
+  schema_version: "1.0.0-draft"
+  brand_version: "2026.07-draft"
+  status: draft
+  owner: "Audio Jones"
+  canonical_repository: "AudioJones-Dev/audiojonesops"
+  asset_repository: "AudioJones-Dev/AudioJonesBranding"
+
+  identity:
+    canonical_name: "Audio Jones"
+    business_name: "AJ Digital LLC"
+    business_brand: "AJ Digital"
+    identity_thesis: >-
+      A strategic operator and creative director who translates artificial
+      intelligence into usable business infrastructure.
+    category:
+      primary: "Founder Intelligence Systems"
+      supporting:
+        - "Operational Intelligence"
+        - "Revenue Leak Diagnostics"
+        - "Follow-Up Intelligence"
+        - "Business Memory"
+    archetypes:
+      primary: strategic_operator
+      secondary: [creative_director, systems_architect, trusted_advisor]
+
+  audience:
+    primary: founder_led_service_businesses
+    problems:
+      - fragmented_communication
+      - inconsistent_speed_to_lead
+      - inconsistent_follow_up
+      - founder_dependency
+      - revenue_leakage
+      - lost_operational_knowledge
+      - unclear_ai_adoption_path
+    desired_outcomes:
+      - faster_response
+      - qualified_conversations
+      - reduced_revenue_leakage
+      - operational_visibility
+      - durable_business_memory
+      - scalable_execution
+
+  promise:
+    functional: >-
+      Turn fragmented communication, knowledge, and workflows into governed
+      systems that improve response, follow-up, visibility, and business memory.
+    emotional: >-
+      Give founders greater clarity, control, and confidence in how their
+      company responds, remembers, and executes.
+
+  differentiation:
+    required:
+      - diagnostic_first
+      - operational_not_theatrical
+      - business_memory_as_moat
+      - human_approval_and_governance
+      - implementation_tied_to_revenue_leaks
+    prohibited_positioning:
+      - generic_ai_agency
+      - chatbot_installer
+      - prompt_consultant
+      - automation_shop
+      - software_reseller
+
+  messaging:
+    prefer:
+      - "Founder Intelligence Systems"
+      - "Operational Intelligence"
+      - "Revenue Leak Diagnostics"
+      - "Business Memory"
+      - "Follow-Up Intelligence"
+      - "qualified conversations"
+      - "signal versus noise"
+    avoid_public:
+      - "agent swarm"
+      - "multi-agent orchestration"
+      - "automation fabric"
+      - "AI OS"
+      - "runtime"
+      - "agentic workflow"
+    evidence_policy: >-
+      Public factual claims require current primary or authoritative evidence,
+      validated client results, or explicit labeling as estimates or assumptions.
+
+  voice:
+    traits:
+      - precise
+      - evidence_disciplined
+      - strategic
+      - direct
+      - grounded
+      - intellectually_serious
+      - commercially_useful
+    avoid:
+      - empty_superlatives
+      - artificial_urgency
+      - unsupported_certainty
+      - buzzword_stacking
+      - vague_futurism
+
+  visual_identity:
+    thesis: "Refined Tropical Operator meets Creative Director"
+    dominant_lane: [refined_casual, soft_tailoring, tailored_relaxed]
+    principles:
+      - controlled_contrast
+      - architectural_composition
+      - premium_texture
+      - restrained_color
+      - strong_negative_space
+      - human_first_technology
+      - realistic_skin_and_materials
+    palette:
+      status: unresolved
+      tokens:
+        deep_navy: null
+        charcoal: null
+        black: "#000000"
+        cream: null
+        stone: null
+        olive: null
+        chocolate: null
+        brand_green: null
+    typography:
+      display:
+        family: "Syne"
+        weights: [600, 700, 800]
+      body:
+        family: null
+        weights: [400, 500, 600]
+
+  governance:
+    generated_files_editable: false
+    source_files_canonical: true
+    lock_state: unlocked
+    major_change_approval: [AudioJones]
+    major_change_domains:
+      - category_positioning
+      - target_audience
+      - brand_promise
+      - strategic_beliefs
+      - visual_identity_thesis

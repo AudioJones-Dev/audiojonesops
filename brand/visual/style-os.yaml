@@ -1,0 +1,161 @@
+style_os:
+  schema_version: "1.0.0-draft"
+  status: draft
+  purpose: >-
+    Convert brand identity into repeatable wardrobe, image-generation,
+    shoot-direction, and visual-marketing decisions.
+
+  identity_lane:
+    primary: refined_tropical_operator
+    secondary: creative_director
+    required_traits:
+      - strategic
+      - contemporary
+      - technically_fluent
+      - creative
+      - operationally_credible
+      - understated
+      - authoritative
+
+  garment_model:
+    numeric_range: "0-100"
+    attributes: [formality, structure, utility, performance, refinement]
+    derived_top_archetypes:
+      - relaxed_casual
+      - refined_casual
+      - soft_tailoring
+      - formal_tailoring
+      - performance
+    derived_bottom_archetypes:
+      - casual_rugged
+      - refined_casual
+      - tailored_relaxed
+      - formal_tailored
+      - performance
+
+  reliability_model:
+    status: provisional_pending_dataset_validation
+    weights:
+      formality_compatibility: 0.30
+      silhouette_compatibility: 0.20
+      fabric_compatibility: 0.15
+      color_compatibility: 0.15
+      context_suitability: 0.10
+      footwear_bridge_strength: 0.10
+    bands:
+      high: {min: 85, max: 100}
+      strong: {min: 70, max: 84}
+      medium: {min: 55, max: 69}
+      advanced: {min: 40, max: 54}
+      low: {min: 0, max: 39}
+    hard_reject_if:
+      - fit_score_below_3
+      - context_score_below_3
+      - climate_score_below_3
+
+  bridge_mechanisms:
+    - footwear
+    - fabric
+    - color
+    - silhouette
+    - outerwear
+    - compatible_visual_weight
+
+  climate_profile:
+    primary: hot_humid
+    region: South_Florida
+    variables:
+      temperature_band: hot
+      humidity: high
+      rainfall_risk: high
+      indoor_ac_exposure: medium_high
+      walking_level: variable
+      sun_exposure: high
+    priorities:
+      - breathability
+      - camera_readiness
+      - wrinkle_management
+      - mobility
+      - rain_awareness
+
+  preferred_materials:
+    - linen
+    - linen_blend
+    - tropical_wool
+    - lightweight_cotton
+    - open_weave_knit
+    - seersucker
+    - tencel_lyocell_blend
+    - lightweight_stretch_woven
+    - suede
+
+  silhouette:
+    torso_fit: controlled_relaxed
+    shoulder: defined_not_exaggerated
+    trouser_rise: [mid, high]
+    trouser_leg: [straight, subtle_taper]
+    trouser_break: [none, slight]
+
+  dominant_categories:
+    tops: [refined_casual, soft_tailoring]
+    bottoms: [refined_casual, tailored_relaxed]
+    footwear: [smart_casual]
+
+  visual_archetypes:
+    founder_authority:
+      message: [competent, decisive, established]
+      pairing: contemporary_tailoring
+    ai_strategist:
+      message: [intelligent, modern, technically_fluent]
+      pairing: relaxed_refinement
+    creative_director:
+      message: [tasteful, distinctive, culturally_credible]
+      pairing: grown_man_casual
+    tropical_executive:
+      message: [regional_authenticity, warm_climate_sophistication]
+      pairing: relaxed_refinement
+    thought_leader:
+      message: [analytical, composed, authoritative]
+      pairing: refined_smart_casual
+    field_operator:
+      message: [capable, practical, mobile]
+      pairing: modern_utility
+
+  image_defaults:
+    facial_fidelity: strict
+    body_fidelity: strict
+    lens_equivalent_mm: 50
+    perspective: natural
+    depth_of_field: moderate
+    grade: cinematic_editorial
+    saturation: restrained
+    contrast: controlled
+    blacks: rich_not_crushed
+    skin: realistic
+
+  exclusions:
+    - altered_facial_structure
+    - altered_body_shape
+    - unrealistic_anatomy
+    - artificially_smooth_skin
+    - generic_tech_founder_hoodie
+    - corporate_suit_cliche
+    - blue_neon_ai
+    - holograms
+    - fake_luxury
+    - random_sports_cars
+    - loud_designer_monograms
+    - excessive_jewelry
+    - skinny_trousers
+    - spray_on_denim
+    - costume_streetwear
+    - generic_stock_photo_expression
+
+  validation_dataset:
+    target_outfits: 50
+    segments:
+      high_reliability: 10
+      medium_reliability: 10
+      failures: 10
+      south_florida_operator: 10
+      occupation_specific: 10
